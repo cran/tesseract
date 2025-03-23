@@ -21,8 +21,8 @@ results
 tesseract_info()
 
 ## ----eval=FALSE---------------------------------------------------------------
-#  # Only need to do download once:
-#  tesseract_download("nld")
+# # Only need to do download once:
+# tesseract_download("nld")
 
 ## ----eval = has_nld-----------------------------------------------------------
 # Now load the dictionary

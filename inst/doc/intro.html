@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2024-10-04" />
+<meta name="date" content="2025-03-23" />
 
 <title>Using the Tesseract OCR engine in R</title>
 
@@ -1479,7 +1479,7 @@ border-radius: 0px;
 
 
 <h1 class="title toc-ignore">Using the Tesseract OCR engine in R</h1>
-<h4 class="date">2024-10-04</h4>
+<h4 class="date">2025-03-23</h4>
 
 </div>
 
@@ -1545,10 +1545,10 @@ currently have installed.</p>
 ## [1] &quot;/Users/jeroen/Library/Application Support/tesseract5/tessdata/&quot;
 ## 
 ## $available
-## [1] &quot;eng&quot; &quot;nld&quot; &quot;osd&quot;
+## [1] &quot;eng&quot;  &quot;nld&quot;  &quot;osd&quot;  &quot;snum&quot;
 ## 
 ## $version
-## [1] &quot;5.4.1&quot;
+## [1] &quot;5.5.0&quot;
 ## 
 ## $configs
 ##  [1] &quot;alto&quot;             &quot;ambigs.train&quot;     &quot;api_config&quot;       &quot;bigram&quot;          
@@ -1570,7 +1570,7 @@ tesseract_download(&quot;nld&quot;)</code></pre>
 <pre><code>## &lt;tesseract engine&gt;
 ##  loaded: nld 
 ##  datapath: /Users/jeroen/Library/Application Support/tesseract5/tessdata/ 
-##  available: eng nld osd</code></pre>
+##  available: eng nld osd snum</code></pre>
 <pre class="r"><code>text &lt;- ocr(&quot;https://jeroen.github.io/images/utrecht2.png&quot;, engine = dutch)
 cat(text)</code></pre>
 <pre><code>## Geschiedenis van de stad Utrecht
@@ -1749,7 +1749,7 @@ tesseract_params(&#39;colour&#39;)</code></pre>
 Tesseract engine 3 and 4.</p>
 <pre class="r"><code>tesseract::tesseract_info()[&#39;version&#39;]</code></pre>
 <pre><code>## $version
-## [1] &quot;5.4.1&quot;</code></pre>
+## [1] &quot;5.5.0&quot;</code></pre>
 <div id="whitelist-blacklist-characters" class="section level3">
 <h3>Whitelist / Blacklist characters</h3>
 <p>One powerful parameter is <code>tessedit_char_whitelist</code> which

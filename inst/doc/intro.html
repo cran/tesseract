@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2025-03-23" />
+<meta name="date" content="2025-12-29" />
 
 <title>Using the Tesseract OCR engine in R</title>
 
@@ -1479,7 +1479,7 @@ border-radius: 0px;
 
 
 <h1 class="title toc-ignore">Using the Tesseract OCR engine in R</h1>
-<h4 class="date">2025-03-23</h4>
+<h4 class="date">2025-12-29</h4>
 
 </div>
 
@@ -1519,14 +1519,14 @@ results</code></pre>
 <pre><code>## # A tibble: 60 × 3
 ##    word  confidence bbox          
 ##    &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;         
-##  1 This        96.8 36,92,96,116  
+##  1 This        96.6 36,92,96,116  
 ##  2 is          96.9 109,92,129,116
-##  3 a           95.7 141,98,156,116
-##  4 lot         95.7 169,92,201,116
+##  3 a           96.3 141,98,156,116
+##  4 lot         96.3 169,92,201,116
 ##  5 of          96.5 212,92,240,116
 ##  6 12          96.5 251,92,282,116
-##  7 point       96.4 296,92,364,122
-##  8 text        96.2 374,93,427,116
+##  7 point       96.5 296,92,364,122
+##  8 text        96.5 374,93,427,116
 ##  9 to          96.9 437,93,463,116
 ## 10 test        97.0 474,93,526,116
 ## # ℹ 50 more rows</code></pre>
@@ -1548,7 +1548,7 @@ currently have installed.</p>
 ## [1] &quot;eng&quot;  &quot;nld&quot;  &quot;osd&quot;  &quot;snum&quot;
 ## 
 ## $version
-## [1] &quot;5.5.0&quot;
+## [1] &quot;5.5.1&quot;
 ## 
 ## $configs
 ##  [1] &quot;alto&quot;             &quot;ambigs.train&quot;     &quot;api_config&quot;       &quot;bigram&quot;          
@@ -1635,9 +1635,9 @@ and resizes + crops the image before feeding it to tesseract to get more
 accurate OCR results.</p>
 <p><img src="https://jeroen.github.io/images/bowers.jpg" data-external="1" alt="bowers" /></p>
 <pre class="r"><code>library(magick)</code></pre>
-<pre><code>## Linking to ImageMagick 6.9.12.93
-## Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
-## Disabled features: fftw, ghostscript, x11</code></pre>
+<pre><code>## Linking to ImageMagick 6.9.13.33
+## Enabled features: fontconfig, freetype, lcms, webp
+## Disabled features: cairo, fftw, ghostscript, heic, pango, raw, rsvg, x11</code></pre>
 <pre class="r"><code>input &lt;- image_read(&quot;https://jeroen.github.io/images/bowers.jpg&quot;)
 
 text &lt;- input %&gt;%
@@ -1660,7 +1660,7 @@ cat(text)</code></pre>
 ## analytical and descriptive bibliography, textual criticism, and scholarly
 ## editing, Fredson Bowers was such a figure, dominating the four decades
 ## after 1949, when his Principles of Bibliographical Description was pub-
-## lished. By 1973 the period was already being called “the age of Bowers”:
+## lished. By 1973 the period was already being called “‘the age of Bowers”:
 ## in that year Norman Sanders, writing the chapter on textual scholarship
 ## for Stanley Wells&#39;s Shakespeare: Select Bibliographies, gave this title to
 ## a section of his essay. For most people, it would be achievement enough
@@ -1676,7 +1676,7 @@ cat(text)</code></pre>
 ## his time.
 ## 
 ## When in 1969 Bowers was awarded the Gold Medal of the Biblio-
-## graphical Society in London, John Carter’s citation referred to the
+## graphical Society in London, John Carter&#39;s citation referred to the
 ## Principles as “majestic,” called Bowers’s current projects “formidable,”
 ## said that he had “imposed critical discipline” on the texts of several
 ## authors, described Studies in Bibliography as a “great and continuing
@@ -1697,7 +1697,7 @@ DPI to keep quality of the image.</p>
 <pre class="r"><code>text &lt;- tesseract::ocr(pngfile)
 cat(text)</code></pre>
 <pre><code>## | SAPORS LANE - BOOLE - DORSET - BH25 8 ER
-## TELEPHONE BOOLE (94513) 51617 - TELEX 123456
+## TELEPHONE BOOLE (945 13) 51617 - TELEX 123456
 ## 
 ## Our Ref. 350/PJC/EAC 18th January, 1972.
 ## Dr. P.N. Cundall,
@@ -1729,7 +1729,7 @@ cat(text)</code></pre>
 ## P.J. CROSS
 ## Group Leader - Facsimile Research
 ## Registered in England: No. 2038
-## No. 1 Registered Office: GO Vicara Lane, Ilford. Essex.</code></pre>
+## No. 1 Registered Office: GO Vicara Lane, Ilford. Eseex.</code></pre>
 </div>
 <div id="tesseract-control-parameters" class="section level2">
 <h2>Tesseract Control Parameters</h2>
@@ -1749,7 +1749,7 @@ tesseract_params(&#39;colour&#39;)</code></pre>
 Tesseract engine 3 and 4.</p>
 <pre class="r"><code>tesseract::tesseract_info()[&#39;version&#39;]</code></pre>
 <pre><code>## $version
-## [1] &quot;5.5.0&quot;</code></pre>
+## [1] &quot;5.5.1&quot;</code></pre>
 <div id="whitelist-blacklist-characters" class="section level3">
 <h3>Whitelist / Blacklist characters</h3>
 <p>One powerful parameter is <code>tessedit_char_whitelist</code> which

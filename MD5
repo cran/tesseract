@@ -1,8 +1,8 @@
-e37abac0f46faddbc07effacd7bdec70 *DESCRIPTION
+4d8f6ac271d19a1b85fc8aaa0edb0e4d *DESCRIPTION
 a7109a3c60f469ba9ec7cac3d6abbccd *NAMESPACE
-580cd34f6b132dfb874d041be5b227f5 *NEWS
+5d55eed7e6df4fd476b180ced3a988d2 *NEWS
 e8a3e4511aef3b4c6452bb8d7ac3c53b *R/RcppExports.R
-e935aea5b8744be858a35be08c399722 *R/ocr.R
+bf08db34dfb40e1b9f879b5fbf3469da *R/ocr.R
 d0550c01c84ebd890a1b1900919c542e *R/onload.R
 25f4fcacccafdad2901ddbfa083d6de1 *R/tessdata.R
 39a63996745e2be624ba3efef9e93b96 *R/tesseract.R
@@ -15,8 +15,8 @@ d55a04cc53f16703fa7bc41f46a81fd7 *inst/COPYRIGHT
 128235dac22618982d91183cd88fbc3e *inst/WORDLIST
 75db32dd189d1fe1cfe671600e5f3230 *inst/doc/intro.R
 6ba728e6d931ffd0a2bf1b5f03b0c921 *inst/doc/intro.Rmd
-c32bb44c15fae45ab63fa95189d9f8a6 *inst/doc/intro.html
-044eac6e66346ba07fac1b4c083c192c *man/ocr.Rd
+89b8c0bd6f2328b02c818c6317e66cd6 *inst/doc/intro.html
+e6e0d6f3bed5c100d74b0fb32fc8b87b *man/ocr.Rd
 7c6cc8b55aa1d4592e414d00b0f0853b *man/tessdata.Rd
 bd2496bffc0fc72d7bf820db3016e5ba *man/tesseract.Rd
 aecb65628fecb0df20846d0012eef0fa *src/Makevars.in

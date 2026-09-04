@@ -1,7 +1,7 @@
 Package: tesseract
 Type: Package
 Title: Open Source OCR Engine
-Version: 5.2.5
+Version: 5.3.0
 Authors@R: person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroenooms@gmail.com",
     comment = c(ORCID = "0000-0002-4035-0289"))
 Description: Bindings to 'Tesseract': 
@@ -24,8 +24,8 @@ Encoding: UTF-8
 VignetteBuilder: knitr
 Language: en-US
 NeedsCompilation: yes
-Packaged: 2026-01-26 14:02:11 UTC; jeroen
+Packaged: 2026-09-04 21:00:37 UTC; jeroen
 Author: Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>)
 Maintainer: Jeroen Ooms <jeroenooms@gmail.com>
 Repository: CRAN
-Date/Publication: 2026-01-26 14:30:02 UTC
+Date/Publication: 2026-09-04 21:30:02 UTC
